@@ -12,9 +12,6 @@ var booleano = true;
 var booleanoDos = false;
 
 
-// console.log(2 === "2");
-
-
 // El if solo valida booleanos
 var edad = 20;
 if (edad >= 18) {
