@@ -34,6 +34,7 @@ function multiplicacion(num1, num2) {
     return result
 }
 
+//Ejecución de mi función
 const mult = multiplicacion(10,5);
 // console.log('El resultado es: '+ mult);
 
