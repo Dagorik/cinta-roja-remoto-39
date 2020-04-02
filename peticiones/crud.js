@@ -39,3 +39,22 @@ function updateIsAliveByAuthorId(idAuthor, isAlive) {
 }
 
 updateIsAliveByAuthorId(4161, true);
+
+function callbackHell() {
+    //CODE
+    request.post(URL, () => {
+        //CODE
+        request.patch(URL, () => {
+            //CODE
+            request.get(URL, () => {
+                //CODE
+                request.delete(URL, () => {
+                    //CODE
+                    request.get(URL, () => {
+                        //CODE
+                    });  
+                });
+            });
+        });
+    });
+}
