@@ -37,7 +37,7 @@ app.get('/users/:idUser', (req, res) => {
     }
 });
 
-// Querys --> http://localhost:3000/search/user?name=Itzel
+// Querys --> http://localhost:3000/search/user?name=Itzel&color=cafe
 app.get('/search/user', (req, res) => {
     console.log(req.query);
     if (req.query.name === 'Itzel') {
@@ -60,6 +60,16 @@ app.post('/crear/user', (req, res) => {
         color: req.body.color
     };
     res.send(respuesta);
+});
+
+// http://localhost:3000/api/suma?num1=5&num2=10 ---> { suma: 15 }
+app.get('/api/suma', (req, res) => {
+    console.log(req.query);
+    const num1 = req.query.num1;
+    const num2 = req.query.num2;
+    const suma = parseInt(num1) + parseInt(num2);
+    console.log(suma);
+    res.status(200).send({ suma: suma })
 });
 
 // Siempre va al final
