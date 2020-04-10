@@ -54,6 +54,31 @@ app.get('/heroe/:id', (req, res) => {
         });
 });
 
+//Actualizar 
+// http://localhost:3000/hereo/5e8e8f8415ce7d10300ea7a1
+app.patch('/heroe/:id', (req, res) => {
+    const idHeroe = req.params.id // --> A quien voy a modificar
+    const keysToUpdate = req.body // --> Que le voy a modificar
+    // findOneAndUpdate(A QUIEN VOY A MODIFICAR, QUE VOY A MODIFICAR, DEVOLVER EL UPDATE)
+    Superheroe.findOneAndUpdate({ _id: idHeroe }, {$set: keysToUpdate}, { new: true }).exec()
+        .then((result) => {
+            res.send(result)
+        }).catch((err) => {
+            res.status(400).send(err)
+        });
+});
+
+// Borrar
+// http://localhost:3000/hereo/5e8e8f8415ce7d10300ea7a1
+app.delete('/heroe/:id', (req, res) => {
+    const idHeroe = req.params.id // --> A quien voy a borrar
+    Superheroe.findOneAndDelete({ _id:idHeroe }).exec()
+        .then(() => {
+            res.send({ message: 'Heroe borrado' });
+        }).catch((err) => {
+            res.status(400).send(err)
+        });
+})
 
 app.listen(3000, () => {
     console.log('Server on');
