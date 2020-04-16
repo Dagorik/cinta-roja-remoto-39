@@ -53,7 +53,7 @@ function Formulario() {
                 console.log(result.data);
                 alert('Ya se creo nuestro author');
             }).catch((err) => {
-                console.log(err);
+                console.log(err.response.data);
                 alert('No funciono');
             });
     }
