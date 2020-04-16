@@ -11,6 +11,7 @@ import Despedida from './Despedida';
 import Contador from './Contador';
 import Card from './Card';
 import axios from 'axios';
+import Formulario from './Formulario';
 
 function App() {
   const word = "Sale chido bye";
@@ -63,6 +64,7 @@ function App() {
       {/* <Saludo texto={wordTwo} />
       <Despedida palabra={word} />
       <Contador /> */}
+      <Formulario />
       {render()}
     </div>
   );
