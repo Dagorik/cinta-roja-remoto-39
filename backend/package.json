@@ -11,6 +11,6 @@
   "author": "Devf Cinta Roja Remoto 39 Raul",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
